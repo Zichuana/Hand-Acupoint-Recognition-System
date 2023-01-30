@@ -1,0 +1,42 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 20/04/2021 13:27
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("../font/Flaticon.eot");
+  src: url("../font/Flaticon.eot") format("embedded-opentype"),
+       url("../font/Flaticon.woff2") format("woff2"),
+       url("../font/Flaticon.woff") format("woff"),
+       url("../font/Flaticon.ttf") format("truetype"),
+       url("http://themepresss.com/tf/html/sadakat-live/assets/fonts/Flaticon.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("http://themepresss.com/tf/html/sadakat-live/assets/fonts/Flaticon.svg") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+  font-size: 50px;
+  font-style: normal;
+  margin-left: 20px;
+}
+
+.flaticon-salad:before { content: "\f100"; }
+.flaticon-script:before { content: "\f101"; }
+.flaticon-school:before { content: "\f102"; }
+.flaticon-medicine:before { content: "\f103"; }
+.flaticon-shopping-bag:before { content: "\f104"; }
+.flaticon-magnifying-glass:before { content: "\f105"; }
+.flaticon-pin:before { content: "\f106"; }
+.flaticon-call:before { content: "\f107"; }
+.flaticon-envelope:before { content: "\f108"; }
+.flaticon-play-button:before { content: "\f109"; }

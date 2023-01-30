@@ -1,0 +1,329 @@
+/*---------------------------------------------------------
+login-design
+-----------------------------------------------------------*/
+.tp-login-area {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    padding: 100px 0;
+}
+.tp-accountWrapper {
+    width: 1170px;
+    display: flex;
+    flex-wrap: wrap;
+    background: #202120;
+    margin: auto;
+    box-shadow: 0px 14px 60px rgba(0,0,0,0.06);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.tp-accountInfo {
+    width: 50%;
+    background: #292929;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 600px;
+    text-align: center;
+    padding: 50px;
+}
+
+.tp-accountForm {
+    width: 50%;
+    padding: 70px 85px;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.tp-accountInfoHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.tp-accountInfoHeader h2 a {
+    display: block;
+    line-height: 50px;
+    font-size: 35px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.tp-accountInfo .tp-accountBtn {
+    height: 40px;
+    background: #202120;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    font-size: 14px;
+    color: #898888;
+    border: 2px solid #202120;
+    transition: all .4s ease-in-out 0s;
+}
+.tp-accountInfo .tp-accountBtn:hover {
+    background: transparent;
+    color: #fff;
+}
+.tp-accountInfo p {
+    color: #fff;
+    font-size: 18px;
+    margin-top: 20px;
+}
+.fromTitle h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.fromTitle p {
+    font-size: 15px;
+    margin-bottom: 40px;
+}
+
+.form-style input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    height: 60px;
+    border: 1px solid #292929 !important;
+    border-radius: 2px;
+    border: none;
+    background: #292929;
+}
+.form-style input:focus{
+    outline: none;
+    border: 1px solid #e5e5e5 !important;
+}
+
+
+
+
+input[type=checkbox] + label {
+  display: block;
+  margin: 0.2em;
+  cursor: pointer;
+  padding: 0.2em;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox] + label:before {
+    content: "\2714";
+    border: 1px solid #e5e5e5;
+    border-radius: 0.2em;
+    display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
+    padding-left: 0.2em;
+    padding-bottom: 0.3em;
+    margin-right: 0.2em;
+    vertical-align: bottom;
+    color: transparent;
+    transition: .2s;
+    line-height: 1.2em;
+    position: absolute;
+    left: 14px;
+}
+
+input[type=checkbox] + label:active:before {
+  transform: scale(0);
+}
+
+input[type=checkbox]:checked + label:before {
+  background-color: #f67d4a;
+  border-color: #f67d4a;
+  color: #fff;
+}
+
+input[type=checkbox]:disabled + label:before {
+  transform: scale(1);
+  border-color: #aaa;
+}
+
+input[type=checkbox]:checked:disabled + label:before {
+  transform: scale(1);
+  background-color: #bfb;
+  border-color: #bfb;
+}
+
+
+.check-box-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.forget-btn a{
+    display: inline-block;
+    font-size: 14px;
+    color: #f67d4a;
+}
+.input-box label {
+    color: #676B79;
+    font-weight: 500;
+    font-size: 16px;
+    padding-left: 20px!important;
+}
+.tp-accountForm .tp-accountBtn{
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 2px solid #f67d4a;
+    width: 100%;
+    background: #f67d4a;
+    color:#fff;
+   transition: all .4s ease-in-out 0s; 
+   margin-top: 30px;
+}
+.tp-accountForm .tp-accountBtn:hover{
+    background: transparent;
+    color: #333;
+}
+.or {
+    border-top: 1px dashed #2e2c2c;
+    margin-top: 45px;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.or span {
+    font-size: 16px;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 0 25px;
+    background: #202120;
+    position: relative;
+    top: -14px;
+    color: #f67d4a;
+}
+.tp-socialLoginBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    list-style: none;
+}
+.tp-socialLoginBtn li button {
+    height: 40px;
+    width: 50px;
+    min-width: 50px;
+    font-size: 15px;
+    border-radius: 3px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    text-transform: capitalize;
+    font-weight: 400;
+    color: #fff;
+}
+
+.tp-socialLoginBtn li button.facebook {
+    background: #3b5998;
+}
+.tp-socialLoginBtn li button.linkedin {
+    background: #0077B5;
+}
+.tp-socialLoginBtn li button.twitter {
+    background: #55acee;
+}
+.tp-socialLoginBtn li {
+    margin: 0px 5px 5px;
+}
+
+.subText {
+    text-align: center;
+}
+.subText a {
+    display: inline-block;
+    font-size: 14px;
+    color: #f67d4a;
+}
+
+
+.form-group{
+    position: relative;
+}
+.input-group-btn {
+    position: absolute;
+    right: 48px;
+    top: 37px;
+}
+.input-group-btn i{
+    color: #898888;
+}
+.input-group-btn button{
+    background: transparent!important;
+    border: none;
+    outline: none;
+    background: none;
+    box-shadow: none!important;
+}
+.input-group-btn button:hover{
+    background: transparent;
+}
+.input-group-btn button:focus,
+.input-group-btn button.active{
+    background: none!important;
+    border: none!important;
+    outline: none!important;
+}
+.btn-default.active, 
+.btn-default.active, 
+.open>.dropdown-toggle.btn-default{
+    background: none!important;
+    border: none;
+    outline: none;
+}
+
+@media(max-width: 1200px){
+    .tp-accountWrapper {
+        width: 900px;
+    }
+     .tp-accountForm {
+    padding: 70px 35px;
+    }
+}
+@media(max-width: 1024px){
+    .tp-accountWrapper {
+    width: 100%;
+    max-width: 100%;
+}
+    .tp-accountForm {
+    padding: 70px 35px;
+    }
+    .image img{
+        width: 100%;
+    }
+}
+
+@media(max-width: 992px){
+    .tp-accountInfo{
+        width: 100%;
+    }
+    .tp-accountForm{
+        width: 100%;
+    }
+    .accountArea {
+    padding: 0px 16px;
+}
+}
+
+@media(max-width: 767px){
+    .tp-accountInfo{
+        width: 100%;
+    }
+    .tp-accountForm{
+        width: 100%;
+    }
+}
+.back-home{
+    max-width: 150px;
+}
