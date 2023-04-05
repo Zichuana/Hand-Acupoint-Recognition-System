@@ -8,7 +8,7 @@ import random
 import json
 from uils import hand_predict
 
-app = Flask(__name__, static_url_path="/")
+app = Flask(__name__)
 
 # 自动重载模板文件
 app.jinja_env.auto_reload = True
@@ -55,4 +55,4 @@ def fore2():
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=2222)
+    app.run(debug=True, host="0.0.0.0", port=2222)
