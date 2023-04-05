@@ -1,6 +1,6 @@
 {
-  "background_color": "purple",
-  "description": "Shows random fox pictures. Hey, at least it isn't cats.",
+  "background_color": "orange",
+  "description": "Hand acupoint recognition based on mediapipe.",
   "display": "fullscreen",
   "icons": [
     {
@@ -9,7 +9,7 @@
       "type": "image/png"
     }
   ],
-  "name": "Awesome fox pictures",
+  "name": "HAND",
   "short_name": "Hand",
   "start_url": "/"
 }
