@@ -14,7 +14,7 @@ def cv2ImgAddText(img, text, left, top, textColor=(0, 255, 0), textSize=100):
     draw = ImageDraw.Draw(img)
     # 字体的格式
     fontStyle = ImageFont.truetype(
-        "simsun.ttc", textSize, encoding="utf-8")
+        "static/font/simsun.ttc", textSize, encoding="utf-8")
     # 绘制文本
     draw.text((left, top), text, textColor, font=fontStyle)
     # 转换回OpenCV格式
