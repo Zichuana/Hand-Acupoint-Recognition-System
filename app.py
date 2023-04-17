@@ -29,6 +29,9 @@ def predict():
         image = request.files["file"]
         img_bytes = image.read()
         image = Image.open(io.BytesIO(img_bytes))
+        width = image.size[0]  # 获取宽度
+        height = image.size[1]  # 获取高度
+        image = image.resize((int(width * 0.5), int(height * 0.5)), Image.ANTIALIAS)
         nowTime = datetime.now().strftime("%Y%m%d%H%M%S")
         randomNum = random.randint(0, 99)
         if randomNum <= 10:
