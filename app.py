@@ -1,7 +1,5 @@
 from flask import Flask, jsonify, render_template, request
 from datetime import datetime, timedelta
-import torchvision.transforms as transforms
-import torch.utils.data.dataloader as Data
 from PIL import Image
 import io
 import random
