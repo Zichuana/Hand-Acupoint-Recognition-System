@@ -5,26 +5,31 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>COVID-19辅助诊断</title>
-    <!-- Plugin css -->
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" media="all">
-    <link rel="stylesheet" type="text/css" href="css/flaticon.css" media="all">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="all">
-    <link rel="stylesheet" type="text/css" href="css/animate.css" media="all">
-    <link rel="stylesheet" type="text/css" href="css/swiper.min.css" media="all">
-    <link rel="stylesheet" type="text/css" href="css/lightcase.css" media="all">
-    <link rel="stylesheet" type="text/css" href="css/jquery.nstSlider.css" media="all">
-    <link rel="stylesheet" type="text/css" href="css/flexslider.css" media="all">
+    <meta name="author" content="wpoceans">
 
-    <!-- own style css -->
-    <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
-    <link rel="stylesheet" type="text/css" href="css/rtl.css" media="all">
-    <link rel="stylesheet" type="text/css" href="css/responsive.css" media="all">
-
-    <title>HTML5上传图片并预览</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
-
+    <title>HAND</title>
+    <link href="manifest.webmanifest" rel="manifest">
+    <link href="css/themify-icons.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/flaticon.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.theme.css" rel="stylesheet">
+    <link href="css/slick.css" rel="stylesheet">
+    <link href="css/slick-theme.css" rel="stylesheet">
+    <link href="css/swiper.min.css" rel="stylesheet">
+    <link href="css/owl.transitions.css" rel="stylesheet">
+    <link href="css/jquery.fancybox.css" rel="stylesheet">
+    <link href="css/odometer-theme-default.css" rel="stylesheet">
+    <link href="css/nice-select.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/light.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 
 <style>
@@ -51,97 +56,121 @@
 </style>
 
 <body>
-    <div id="loading">
-        <div id="loading-center">
-            <div id="loading-center-absolute">
-                <div class="object" id="object_one"></div>
-                <div class="object" id="object_two"></div>
-                <div class="object" id="object_three"></div>
-                <div class="object" id="object_four"></div>
-            </div>
+<div class="page-wrapper">
+    <!-- start preloader -->
+    <div class="preloader">
+        <div class="sk-folding-cube">
+            <div class="sk-cube1 sk-cube"></div>
+            <div class="sk-cube2 sk-cube"></div>
+            <div class="sk-cube4 sk-cube"></div>
+            <div class="sk-cube3 sk-cube"></div>
         </div>
     </div>
-    <div class="box-layout">
 
-        <header class="header-style-2">
-            <div class="bg-main-menu menu-scroll">
+        <header id="header" class="tp-site-header tp-header-style-2">
+            <div class="topbar">
                 <div class="container">
                     <div class="row">
-                        <div class="main-menu">
-                            <div class="main-menu-bottom">
-                                <div class="navbar-header">
-                                    <button type="button" class="navbar-toggler collapsed d-lg-none"
-                                        data-bs-toggle="collapse" data-bs-target="#bs-example-navbar-collapse-1"
-                                        aria-controls="bs-example-navbar-collapse-1" aria-expanded="false">
-                                        <span class="navbar-toggler-icon">
-                                            <i class="fa fa-bars"></i>
-                                        </span>
-                                    </button>
-                                </div>
-                                <div class="main-menu-area">
-                                    <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
-                                        <ul>
-                                            <li><a href="{{ url_for('index') }}">主页</a></li>
-                                            <li><a href="{{ url_for('predict') }}">分类预测</a></li>
-                                            <li><a href="{{ url_for('segmentation') }}">图像分割</a></li>
-                                            <li><a href="{{ url_for('conversion') }}">图像转换</a></li>
-                                            <li><a href="{{ url_for('feedback') }}" class="active">用户反馈</a></li>
-                                            <li><a href="{{ url_for('user') }}">用户中心</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
+                        <div class="col col-md-6 col-sm-7 col-12">
+                            <div class="contact-intro">
+                                <ul>
+                                    <li><i class="fi flaticon-envelope"></i>zichuana@stu.ahtcm.edu.cn</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col col-md-6 col-sm-5 col-12">
+                            <div class="contact-info">
+                                <ul>
+                                    <li><a href="{{ url_for('logout') }}">退出</a></li>
+                                    <li><a href="{{ url_for('feedback') }}">反馈</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <nav class="navigation navbar navbar-default">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="/"><h2>mediapipe-hand-acupoint</h2></a>
+                    </div><!-- end of nav-collapse -->
+                </div><!-- end of container -->
+            </nav>
         </header>
-
-        <section class="bg-servicesstyle2-section">
-            <div class="container">
-                <form method="post" action="{{ url_for('user') }}">
-                    <div>
-                        <h4 style="color: #96989a;">感谢您留下珍贵的反馈与建议</h4>
-                    </div>
-                    <textarea class="test3" type="text" contenteditable="true" name="text"></textarea>
-                    <div style="padding-top: 10px">
-                        <button class="btn btn-default">&nbsp;提&nbsp;&nbsp;&nbsp;&nbsp;交&nbsp;</button>
-                        <p>{{msg}}</p>
-                    </div>
-                </form>
-            </div>
-        </section>
-
-        <section class="bg-sponsors-section">
-            <div class="container">
-                <div class="row">
-                    <div class="sponsors-option">
-                    <!-- <div class=" section-header"> -->
-                        <div class="section-bottom">
-                            <h2>Zichuana</h2>
-                            <p>竞赛项目</p>
-                            <p>使用过程中出现的任何问题可以通过用户反馈反馈给我们，同时欢迎有更好提议的您参与反馈</p>
-                            <p>联系邮箱：2092653757@qq.com</p>
+        <!-- end of header -->
+        <section class="hero hero-style-1">
+        <div class="hero-slider">
+            <div class="slide">
+                <div class="container">
+                    <img src="/image/0.jpg" alt="" class="slider-bg">
+                    <div class="row">
+                        <div class="col col-md-6 slide-caption">
+                            <div class="slide-title">
+                                <h2>手部穴位识别系统<span>MHA</span></h2>
+                                <p></p>
+                                <h3>感谢您留下珍贵的反馈与建议</h3>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+        <section class="blog-section section-padding">
+            <div class="container">
+                <div class="col-md-12">
+                    <form method="post" action="{{ url_for('feedback') }}">
+                        <div>
+                            <h4 style="color: #96989a;">使用阶段存在的问题可以在此填写，为了我们更好的改进与提升</h4>
+                        </div>
+                        <textarea class="test3" type="text" contenteditable="true" name="text"></textarea>
+                        <div class="slider-btn">
+                            <button class="theme-btn" style="width: 120px">提交</button>
+                            <p>{{msg}}</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </section>
-    </div>
-    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-    <script type="text/javascript" src="js/jquery.waypoints.min.js"></script>
-    <script type="text/javascript" src="js/jquery.counterup.min.js"></script>
-    <script type="text/javascript" src="js/swiper.min.js"></script>
-    <script type="text/javascript" src="js/lightcase.js"></script>
-    <script type="text/javascript" src="js/jquery.nstSlider.js"></script>
-    <script type="text/javascript" src="js/jquery.flexslider.js"></script>
-    <script type="text/javascript" src="js/custom.map.js"></script>
-    <script type="text/javascript" src="js/plugins.isotope.js"></script>
-    <script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
-    <script type="text/javascript" src="js/custom.isotope.js"></script>
-    <script type="text/javascript" src="js/custom.js"></script>
-</body>
 
+        <div class="tp-ne-footer">
+            <!-- start tp-site-footer -->
+            <footer class="tp-site-footer">
+                <div class="tp-upper-footer">
+                    <div class="section-title text-center"><h3>@Zichuana</h3></div>
+                    <div class="section-title text-center">
+                    </div>
+                </div>
+            </footer>
+            <!-- end tp-site-footer -->
+        </div>
+    </div>
+    <!-- end of page-wrapper -->
+    <!-- theme-change-btn -->
+    <div class="theme-change-btn">
+        <button id="change-theme-btn">
+            <span class="cng-btn-1">Light <i class="ti-palette"></i></span>
+            <span class="cng-btn-2">Dark  <i class="ti-palette"></i></span>
+        </button>
+    </div>
+
+    <div id="magic-cursor">
+        <div id="ball">
+            <div id="ball-drag-x"></div>
+            <div id="ball-drag-y"></div>
+            <div id="ball-loader"></div>
+        </div>
+    </div>
+    <!-- All JavaScript files
+    ================================================== -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Plugins for this template -->
+    <script src="js/jquery-plugin-collection.js"></script>
+    <script src="js/gsap.min.js"></script>
+    <!-- Custom script for this template -->
+    <script src="js/script.js"></script>
+    <script src="js/index.js"></script>
+</body>
 </html>
+

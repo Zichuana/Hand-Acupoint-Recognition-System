@@ -25,7 +25,7 @@ basedir = os.path.abspath(os.path.dirname(__file__))  # 使用绝对路径
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'users.sqlite')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
-
+app.secret_key = 'secret_key'  # 设置表单交互密钥
 # 1、实例化登录管理对象
 login_manager = LoginManager()
 
@@ -96,7 +96,7 @@ def login():
 @app.route("/logout")
 def logout():
     logout_user()
-    return redirect(url_for('index'))
+    return redirect(url_for('root'))
 
 
 @app.route('/feedback', methods=["POST", "GET"])
@@ -131,7 +131,7 @@ def create():
 
 @app.route("/", methods=["GET", "POST"])
 def root():
-    return render_template("index.html")
+    return render_template("root.html")
 
 
 @app.route("/index", methods=["GET", "POST"])

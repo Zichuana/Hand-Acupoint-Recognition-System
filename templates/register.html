@@ -1,75 +1,214 @@
 <!DOCTYPE html>
+<!--<html lang="en">-->
+
+<!--<head>-->
+<!--    <title>注册</title>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!--    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />-->
+<!--    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">-->
+<!--    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">-->
+<!--    <link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">-->
+<!--    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">-->
+<!--    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">-->
+<!--    <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">-->
+<!--    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">-->
+<!--    <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">-->
+<!--    <link rel="stylesheet" type="text/css" href="css/util.css">-->
+<!--    <link rel="stylesheet" type="text/css" href="css/main.css">-->
+<!--</head>-->
+
+<!--<body>-->
+
+<!--    <div class="limiter">-->
+<!--        <div class="container-login100">-->
+<!--            <div class="wrap-login100">-->
+<!--                <div class="login100-form-title" style="background-image: url(/image/bg-01.png);">-->
+<!--                    <span class="login100-form-title-1">-->
+<!--                        REGISTER-->
+<!--                    </span>-->
+<!--                </div>-->
+
+<!--                <form class="login100-form validate-form" method="post" action="{{ url_for('register') }}">-->
+<!--                    <div class="wrap-input100 validate-input m-b-26" data-validate="用户名必填">-->
+<!--                        <span class="label-input100">用户名</span>-->
+<!--                        <input class="input100" type="text" name="username" autocomplete="off">-->
+<!--                        <span class="focus-input100"></span>-->
+<!--                    </div>-->
+
+<!--                    <div class="wrap-input100 validate-input m-b-16" data-validate="邮箱必填">-->
+<!--                        <span class="label-input100">邮箱</span>-->
+<!--                        <input class="input100" type="text" name="mail" autocomplete="off">-->
+<!--                        <span class="focus-input100"></span>-->
+<!--                    </div>-->
+<!--                    <div class="wrap-input100 validate-input m-b-18" data-validate="密码必填">-->
+<!--                        <span class="label-input100">密码</span>-->
+<!--                        <input class="input100" type="password" name="password" autocomplete="off">-->
+<!--                        <span class="focus-input100"></span>-->
+<!--                    </div>-->
+<!--                    <div class="wrap-input100 validate-input m-b-18" data-validate="密码必填">-->
+<!--                        <span class="label-input100">确认密码</span>-->
+<!--                        <input class="input100" type="password" name="repassword" autocomplete="off">-->
+<!--                        <span class="focus-input100"></span>-->
+<!--                    </div>-->
+<!--                    <div class="container-login100-form-btn" style="padding-top: 10px">-->
+<!--                        <button  class="login100-form-btn">-->
+<!--                            注册-->
+<!--                        </button><p>{{msg}}</p>-->
+<!--                    </div>-->
+<!--                </form>-->
+<!--                <p></p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>-->
+<!--    <script src="vendor/animsition/js/animsition.min.js"></script>-->
+<!--    <script src="vendor/bootstrap/js/popper.js"></script>-->
+<!--    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>-->
+<!--    <script src="vendor/select2/select2.min.js"></script>-->
+<!--    <script src="vendor/daterangepicker/moment.min.js"></script>-->
+<!--    <script src="vendor/daterangepicker/daterangepicker.js"></script>-->
+<!--    <script src="vendor/countdowntime/countdowntime.js"></script>-->
+<!--    <script src="js/main.js"></script>-->
+
+<!--</body>-->
+
 <html lang="en">
 
 <head>
-    <title>注册</title>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
-    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
-    <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
-    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-    <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
-    <link rel="stylesheet" type="text/css" href="css/util.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <meta name="author" content="wpoceans">
+    <title>Sadakat - Charity Nonprofit HTML 5 Template</title>
+    <link href="css/themify-icons.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/flaticon.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.theme.css" rel="stylesheet">
+    <link href="css/slick.css" rel="stylesheet">
+    <link href="css/slick-theme.css" rel="stylesheet">
+    <link href="css/swiper.min.css" rel="stylesheet">
+    <link href="css/owl.transitions.css" rel="stylesheet">
+    <link href="css/jquery.fancybox.css" rel="stylesheet">
+    <link href="css/odometer-theme-default.css" rel="stylesheet">
+    <link href="css/nice-select.css" rel="stylesheet">
+    <link href="css/signup.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/light.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
 </head>
 
 <body>
-
-    <div class="limiter">
-        <div class="container-login100">
-            <div class="wrap-login100">
-                <div class="login100-form-title" style="background-image: url(/image/bg-01.png);">
-                    <span class="login100-form-title-1">
-                        REGISTER
-                    </span>
+    <!-- start preloader -->
+    <div class="preloader">
+        <div class="sk-folding-cube">
+            <div class="sk-cube1 sk-cube"></div>
+            <div class="sk-cube2 sk-cube"></div>
+            <div class="sk-cube4 sk-cube"></div>
+            <div class="sk-cube3 sk-cube"></div>
+        </div>
+    </div>
+    <!-- end preloader -->
+    <div class="tp-login-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <form class="tp-accountWrapper" action="{{ url_for('register') }}" method="post">
+                        <div class="tp-accountInfo">
+                            <div class="tp-accountInfoHeader">
+                                <a class="tp-accountBtn" href="{{ url_for('login') }}">
+                                    <span class="">登入</span>
+                                </a>
+                            </div>
+                            <div class="image">
+                                <img src="picture/login.svg" alt="">
+                            </div>
+                            <div class="back-home">
+                                <a class="tp-accountBtn" href="{{ url_for('root') }}">
+                                    <span class="">返回主页</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="tp-accountForm form-style">
+                            <div class="fromTitle">
+                                <h2>Register</h2>
+                                <p>Register into your pages account</p>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-12">
+                                    <label>用户名</label>
+                                    <input class="input100" type="text" name="username" autocomplete="off">
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-12">
+                                    <label>邮箱</label>
+                                    <input class="input100" type="text" name="mail" autocomplete="off">
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-12">
+                                    <div class="form-group">
+                                        <label>密码</label>
+                                        <input class="input100" type="password" name="password" autocomplete="off">
+                                    </div>
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default reveal3" type="button"><i class="glyphicon glyphicon-eye-open"></i></button>
+                                    </span>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-12">
+                                    <div class="form-group">
+                                        <label>确认密码</label>
+                                        <input class="input100" type="password" name="repassword" autocomplete="off">
+                                    </div>
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default reveal2" type="button"><i class="glyphicon glyphicon-eye-open"></i></button>
+                                    </span>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-12">
+                                    <button type="submit" class="tp-accountBtn">注册</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-
-                <form class="login100-form validate-form" method="post" action="{{ url_for('register') }}">
-                    <div class="wrap-input100 validate-input m-b-26" data-validate="用户名必填">
-                        <span class="label-input100">用户名</span>
-                        <input class="input100" type="text" name="username" autocomplete="off">
-                        <span class="focus-input100"></span>
-                    </div>
-
-                    <div class="wrap-input100 validate-input m-b-16" data-validate="邮箱必填">
-                        <span class="label-input100">邮箱</span>
-                        <input class="input100" type="text" name="mail" autocomplete="off">
-                        <span class="focus-input100"></span>
-                    </div>
-                    <div class="wrap-input100 validate-input m-b-18" data-validate="密码必填">
-                        <span class="label-input100">密码</span>
-                        <input class="input100" type="password" name="password" autocomplete="off">
-                        <span class="focus-input100"></span>
-                    </div>
-                    <div class="wrap-input100 validate-input m-b-18" data-validate="密码必填">
-                        <span class="label-input100">确认密码</span>
-                        <input class="input100" type="password" name="repassword" autocomplete="off">
-                        <span class="focus-input100"></span>
-                    </div>
-                    <div class="container-login100-form-btn" style="padding-top: 10px">
-                        <button  class="login100-form-btn">
-                            注册
-                        </button><p>{{msg}}</p>
-                    </div>
-                </form>
-                <p></p>
             </div>
         </div>
     </div>
-
-    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-    <script src="vendor/animsition/js/animsition.min.js"></script>
-    <script src="vendor/bootstrap/js/popper.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="vendor/select2/select2.min.js"></script>
-    <script src="vendor/daterangepicker/moment.min.js"></script>
-    <script src="vendor/daterangepicker/daterangepicker.js"></script>
-    <script src="vendor/countdowntime/countdowntime.js"></script>
-    <script src="js/main.js"></script>
-
+    <!-- theme-change-btn -->
+    <div class="theme-change-btn">
+        <button id="change-theme-btn">Light</button>
+   </div>
+    <!-- All JavaScript files
+    ================================================== -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Plugins for this template -->
+    <script src="js/jquery-plugin-collection.js"></script>
+    <!-- Custom script for this template -->
+    <script src="js/script.js"></script>
+    <script>
+    $(".reveal").on('click', function() {
+        var $pwd = $(".pwd");
+        if ($pwd.attr('type') === 'text') {
+            $pwd.attr('type', 'password');
+        } else {
+            $pwd.attr('type', 'text');
+        }
+    });
+    $(".reveal2").on('click', function() {
+        var $pwd = $(".pwdr");
+        if ($pwd.attr('type') === 'text') {
+            $pwd.attr('type', 'password');
+        } else {
+            $pwd.attr('type', 'text');
+        }
+    });
+    </script>
 </body>
+
+</html>
