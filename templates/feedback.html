@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>COVID-19辅助诊断</title>
+    <!-- Plugin css -->
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/flaticon.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/animate.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/lightcase.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/jquery.nstSlider.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/flexslider.css" media="all">
+
+    <!-- own style css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/rtl.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css" media="all">
+
+    <title>HTML5上传图片并预览</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+
+</head>
+
+<style>
+    .test3 {
+        width: 800px;
+        min-height: 600px;
+        line-height: 30px;
+        max-height: 300px;
+        _height: 60px;
+        /* IE6浏览器对min/max家族不屑一顾，结合其内部元素溢出会撑开父标签高宽的特性,所以针对IE6 直接定高 */
+        margin: 0 auto;
+        padding: 10px;
+        outline: 0;
+        /* 浏览器如Firefox在可编辑模式下的div获取焦点的时候会有虚框，而实际上textarea是 没有虚框显示的 */
+        border: 1px solid #a0b3d6;
+        border-radius: 4px;
+        font-size: 12px;
+        word-wrap: break-word;
+        overflow-x: hidden;
+        overflow-y: auto;
+        _overflow-y: visible;
+        -webkit-user-modify: read-write-plaintext-only;
+    }
+</style>
+
+<body>
+    <div id="loading">
+        <div id="loading-center">
+            <div id="loading-center-absolute">
+                <div class="object" id="object_one"></div>
+                <div class="object" id="object_two"></div>
+                <div class="object" id="object_three"></div>
+                <div class="object" id="object_four"></div>
+            </div>
+        </div>
+    </div>
+    <div class="box-layout">
+
+        <header class="header-style-2">
+            <div class="bg-main-menu menu-scroll">
+                <div class="container">
+                    <div class="row">
+                        <div class="main-menu">
+                            <div class="main-menu-bottom">
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggler collapsed d-lg-none"
+                                        data-bs-toggle="collapse" data-bs-target="#bs-example-navbar-collapse-1"
+                                        aria-controls="bs-example-navbar-collapse-1" aria-expanded="false">
+                                        <span class="navbar-toggler-icon">
+                                            <i class="fa fa-bars"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="main-menu-area">
+                                    <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
+                                        <ul>
+                                            <li><a href="{{ url_for('index') }}">主页</a></li>
+                                            <li><a href="{{ url_for('predict') }}">分类预测</a></li>
+                                            <li><a href="{{ url_for('segmentation') }}">图像分割</a></li>
+                                            <li><a href="{{ url_for('conversion') }}">图像转换</a></li>
+                                            <li><a href="{{ url_for('feedback') }}" class="active">用户反馈</a></li>
+                                            <li><a href="{{ url_for('user') }}">用户中心</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="bg-servicesstyle2-section">
+            <div class="container">
+                <form method="post" action="{{ url_for('user') }}">
+                    <div>
+                        <h4 style="color: #96989a;">感谢您留下珍贵的反馈与建议</h4>
+                    </div>
+                    <textarea class="test3" type="text" contenteditable="true" name="text"></textarea>
+                    <div style="padding-top: 10px">
+                        <button class="btn btn-default">&nbsp;提&nbsp;&nbsp;&nbsp;&nbsp;交&nbsp;</button>
+                        <p>{{msg}}</p>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="bg-sponsors-section">
+            <div class="container">
+                <div class="row">
+                    <div class="sponsors-option">
+                    <!-- <div class=" section-header"> -->
+                        <div class="section-bottom">
+                            <h2>Zichuana</h2>
+                            <p>竞赛项目</p>
+                            <p>使用过程中出现的任何问题可以通过用户反馈反馈给我们，同时欢迎有更好提议的您参与反馈</p>
+                            <p>联系邮箱：2092653757@qq.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="js/jquery.waypoints.min.js"></script>
+    <script type="text/javascript" src="js/jquery.counterup.min.js"></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script type="text/javascript" src="js/lightcase.js"></script>
+    <script type="text/javascript" src="js/jquery.nstSlider.js"></script>
+    <script type="text/javascript" src="js/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="js/custom.map.js"></script>
+    <script type="text/javascript" src="js/plugins.isotope.js"></script>
+    <script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
+    <script type="text/javascript" src="js/custom.isotope.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+</body>
+
+</html>
